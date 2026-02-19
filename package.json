@@ -1,0 +1,41 @@
+{
+  "name": "freelang-v4-crypto",
+  "version": "1.0.0",
+  "description": "Comprehensive Cryptography & Security System for FreeLang v4",
+  "main": "dist/crypto-system.js",
+  "types": "dist/types.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "crypto",
+    "encryption",
+    "hashing",
+    "rsa",
+    "aes",
+    "hmac",
+    "pbkdf2",
+    "bcrypt",
+    "argon2",
+    "tls",
+    "ssl",
+    "x509",
+    "certificate"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "argon2": "^0.31.2",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0"
+  }
+}
