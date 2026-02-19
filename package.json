@@ -1,41 +1,14 @@
 {
   "name": "freelang-v4-crypto",
   "version": "1.0.0",
-  "description": "Comprehensive Cryptography & Security System for FreeLang v4",
-  "main": "dist/crypto-system.js",
-  "types": "dist/types.d.ts",
+  "description": "FreeLang v4 Crypto Functions — 5개 내장 함수 (hash, hmac, encrypt, decrypt, uuid) — Hardened Security Runtime",
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "clean": "rm -rf dist"
-  },
-  "keywords": [
-    "crypto",
-    "encryption",
-    "hashing",
-    "rsa",
-    "aes",
-    "hmac",
-    "pbkdf2",
-    "bcrypt",
-    "argon2",
-    "tls",
-    "ssl",
-    "x509",
-    "certificate"
-  ],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "argon2": "^0.31.2",
-    "bcryptjs": "^2.4.3"
+    "start": "npx ts-node src/main.ts",
+    "test": "npx ts-node tests/crypto.test.ts"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/jest": "^29.5.0",
-    "@types/node": "^20.0.0",
-    "jest": "^29.5.0",
-    "ts-jest": "^29.1.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "@types/node": "^20.0.0"
   }
 }

@@ -1,0 +1,21 @@
+// FreeLang v4 — Crypto 예제 02: hmac (메시지 인증)
+// 실행: ts-node src/main.ts examples/02_hmac.fl --no-check
+
+// 분산 노드 통신 인증
+let secret = "node-shared-secret"
+let payload = "sync:node1->node2:1700000000"
+
+let token = hmac(payload, secret)
+print(token)
+// 64자 hex MAC
+
+// SHA-512 HMAC
+let strong = hmac(payload, secret, "sha512")
+print(strong)
+// 128자 hex MAC
+
+// 위조 토큰은 검증 실패
+let real_token = hmac("message", "key")
+let fake_token = hmac("message", "wrongkey")
+print(real_token)
+print(fake_token)

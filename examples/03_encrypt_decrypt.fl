@@ -1,0 +1,20 @@
+// FreeLang v4 — Crypto 예제 03: encrypt/decrypt (AES-256-GCM)
+// 실행: ts-node src/main.ts examples/03_encrypt_decrypt.fl --no-check
+
+// 민감한 설정값 암호화
+let secret_config = "{\"db_password\":\"s3cr3t\",\"api_key\":\"sk-abc123\"}"
+let master_key = "empire-master-2025"
+
+let enc_result = encrypt(secret_config, master_key)
+print(enc_result)
+// ok("iv_hex:authTag_hex:ciphertext_hex")
+
+// 복호화 (올바른 키)
+let dec_result = decrypt(enc_result, master_key)
+print(dec_result)
+// ok("{\"db_password\":\"s3cr3t\",...}")
+
+// 잘못된 키 → 복호화 실패
+let bad_result = decrypt(enc_result, "wrong-key")
+print(bad_result)
+// err("decrypt: 복호화 실패...")

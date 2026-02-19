@@ -1,0 +1,19 @@
+// FreeLang v4 — Crypto 예제 04: uuid (고유 식별자)
+// 실행: ts-node src/main.ts examples/04_uuid.fl --no-check
+
+// 트랜잭션 ID 생성
+let tx_id = uuid()
+print(tx_id)
+// "550e8400-e29b-41d4-a716-446655440000" 형태
+
+// 감사 로그 항목 생성
+let log_id = uuid()
+let event_id = uuid()
+print(log_id)
+print(event_id)
+
+// 매번 고유한 값
+let id1 = uuid()
+let id2 = uuid()
+print(id1)
+print(id2)

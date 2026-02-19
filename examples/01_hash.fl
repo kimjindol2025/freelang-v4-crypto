@@ -1,0 +1,22 @@
+// FreeLang v4 — Crypto 예제 01: hash (데이터 지문)
+// 실행: ts-node src/main.ts examples/01_hash.fl --no-check
+
+// SHA-256 (기본) — Audit 스냅샷 지문
+let snapshot = "users:1000:2025-01-01"
+let fingerprint = hash(snapshot)
+print(fingerprint)
+// ba7816...
+
+// SHA-512 — 더 강한 지문
+let h512 = hash("critical-data", "sha512")
+print(h512)
+
+// 눈사태 효과: 1글자 변경 → 완전히 다른 해시
+let h1 = hash("hello")
+let h2 = hash("Hello")
+print(h1)
+print(h2)
+
+// 약한 알고리즘 경고
+let weak = hash("legacy", "md5")
+print(weak)   // WEAK:md5:...
